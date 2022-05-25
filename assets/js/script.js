@@ -11,6 +11,7 @@ const displayTime = () => {
     currentDateEl.text(currentDate);
     currentDateEl.text(`Current date: ${currentDate}`);
 }
+
 setInterval(displayTime, 1000);
 
 
@@ -23,19 +24,17 @@ const createSchedule = () => {
         let row = $('<div class="row time-block">');
         timeBlocksEl.append(row);
 
-        let time = $('<div class="hour">');
+        let time = $('<div class="hour col py-3">');
         time.text(hour);
         row.append(time);
 
-        let eventInput = $(`<textarea class="userInput" id="${i}" 
+        let eventInput = $(`<textarea class="userInput col-9" id="${i}" 
         placeholder="Click here to enter an event">`);
         row.append(eventInput);
 
-        let saveBtn = $(`<button class="saveBtn" data-index="${i}">Save</button>`);
+        let saveBtn = $(`<button class="saveBtn col" data-index="${i}">Save</button>`);
         row.append(saveBtn);
     }
 }
 
 createSchedule();
-
-
