@@ -36,9 +36,8 @@ const createSchedule = () => {
         row.append(eventInput);
 
         // each row has a button that links to its respective textarea so that the user can save their events.
-        // added a margin to make the schedule look more tidy on the page. each button also has a unique
-        // button number for easier referencing
-        let saveBtn = $(`<button class="saveBtn col mr-4" data-button="${i}">Save</button>`);
+        // Each button also has a unique button number for easier referencing
+        let saveBtn = $(`<button class="saveBtn col" data-button="${i}">Save</button>`);
         row.append(saveBtn);
     };
 };
